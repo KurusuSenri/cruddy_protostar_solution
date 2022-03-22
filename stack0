@@ -1,0 +1,4 @@
+user@protostar:/tmp$ python stack0.py | /opt/protostar/bin/stack0 
+you have changed the 'modified' variable
+
+user@protostar:/tmp$

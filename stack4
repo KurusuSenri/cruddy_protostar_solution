@@ -1,0 +1,5 @@
+user@protostar:/tmp$ python stack4.py | /opt/protostar/bin/stack4
+code flow successfully changed
+Segmentation fault
+
+user@protostar:/tmp$

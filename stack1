@@ -1,0 +1,6 @@
+user@protostar:/tmp$ python stack1.py > st1
+
+user@protostar:/tmp$ /opt/protostar/bin/stack1 "$(< st1)"
+you have correctly got the variable to the right value
+
+user@protostar:/tmp$

