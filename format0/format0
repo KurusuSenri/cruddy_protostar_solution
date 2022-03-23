@@ -1,0 +1,3 @@
+user@protostar:/opt/protostar/bin$ ./format0 "$(/tmp/format0.rb)"
+you have hit the target correctly :)
+user@protostar:/opt/protostar/bin$
