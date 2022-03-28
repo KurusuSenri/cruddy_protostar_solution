@@ -21,7 +21,7 @@ breadcrumb = "ABCD"
 times = 1
 maximum = 200
 
-while times < maximum
+while times <= maximum
 	command = <<-END
 /opt/protostar/bin/format1 "#{breadcrumb} #{"%p " * times}"
 	END
