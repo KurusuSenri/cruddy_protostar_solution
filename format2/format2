@@ -1,6 +1,8 @@
 user@protostar:/tmp/format$ ./format2.rb 
 XXXX00000200b7fd8420bffff5e458585858783830257838302578383025
 you have modified the target :)
+ABCD00000200|b7fd8420|bffff5e4|44434241|78383025|3830257c|30257c78|257c7838|7c783830|78383025|
+target is 0 :(
                                                          200
 you have modified the target :)
-user@protostar:/tmp/format$
+user@protostar:/tmp/format$ 

