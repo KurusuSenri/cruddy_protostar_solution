@@ -1,0 +1,6 @@
+user@protostar:/tmp/net$ ./net0.rb 
+> receive: Please send '1054037236' as a little endian 32bit int
+> target: 1054037236
+> response: "\364T\323>"
+Thank you sir/madam
+user@protostar:/tmp/net$

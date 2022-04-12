@@ -1,0 +1,5 @@
+user@protostar:/tmp/net$ ./net1.rb 
+> receive: "r\317\0000"
+> response: [805359474]
+you correctly sent the data
+user@protostar:/tmp/net$ 
