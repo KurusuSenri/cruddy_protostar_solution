@@ -1,8 +1,8 @@
-# protostar_solutions
+# cruddy_protostar_solution
 
 https://exploit.education/protostar/
 
-详细一点的解释：
+[zh-cn] 详细一点的解释：
 
 Stack: https://senri.run/p/protostar_stack_4-7/
 
